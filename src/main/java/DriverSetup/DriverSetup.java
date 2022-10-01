@@ -10,6 +10,7 @@ public class DriverSetup {
 
 
     WebDriver driver;
+
     public WebDriver getDriver() {
 
         //Chrome options for notification and popup blocking
@@ -24,7 +25,6 @@ public class DriverSetup {
         //this line created the chromedriver
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver(options);
-        // this line for get url*/
 
     }
 

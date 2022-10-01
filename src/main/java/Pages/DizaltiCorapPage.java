@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class DizaltiCorapPage {
 
     WebDriver driver;
@@ -19,38 +21,44 @@ public class DizaltiCorapPage {
     By addBasketProductSelected = By.xpath("//button[@class='add-to-basket button green block with-icon js-add-basket']");
 
     By wievBasketBtn = By.xpath("//a[@class='go-to-shop']");
-    public DizaltiCorapPage(WebDriver driver){
+
+    public DizaltiCorapPage(WebDriver driver) {
+
         this.driver = driver;
-        this.wt = new WebDriverWait(driver,10);
+        this.wt = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
-    public void filterBlackProduct(){
+    public void filterBlackProduct() {
+
         wt.until(ExpectedConditions.elementToBeClickable(driver.findElement(filterBlackColour))).click();
-    }
 
-    public void addBasket(){
-
-        wt.until(ExpectedConditions.elementToBeClickable(driver.findElement(addBasketBtn))).click();
 
     }
 
-    public String checkProductColour(){
+    public boolean addBasket() {
+
+        wt.until(ExpectedConditions.urlToBe("https://www.a101.com.tr/giyim-aksesuar/dizalti-corap/?attributes_integration_colour=S%C4%B0YAH"));
+        wt.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[@class='icon-sepetekle']")));
+        driver.findElement(By.xpath("//em[@class='icon-sepetekle']")).click();
+        return true;
+    }
+
+    public String checkProductColour() {
 
         return wt.until(ExpectedConditions.elementToBeClickable(driver.findElement(checkProductColour))).getText();
 
     }
 
-    public void addBasketProduct(){
+    public void addBasketProduct() {
 
         driver.findElement(addBasketProductSelected).click();
 
     }
 
-    public void viewBasket(){
-       wt.until(ExpectedConditions.elementToBeClickable( driver.switchTo().activeElement().findElement(wievBasketBtn))).click();
+    public void viewBasket() {
+
+        wt.until(ExpectedConditions.elementToBeClickable(driver.switchTo().activeElement().findElement(wievBasketBtn))).click();
     }
-
-
 
 
 }
