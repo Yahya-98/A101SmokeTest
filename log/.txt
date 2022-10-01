@@ -1,0 +1,16 @@
+2022-10-01 17:16:16 INFO  TestPage:24 - Test Start
+2022-10-01 17:16:19 INFO  TestPage:40 - Pop up Accept
+2022-10-01 17:16:22 INFO  TestPage:46 - Go to dizaltı çorap page
+2022-10-01 17:16:25 INFO  TestPage:51 - Click filter to black
+2022-10-01 17:16:25 INFO  TestPage:56 - Select first product
+2022-10-01 17:16:26 INFO  TestPage:62 - Check product colour
+2022-10-01 17:16:27 INFO  TestPage:68 - Product added to basket
+2022-10-01 17:16:27 INFO  TestPage:73 - Wiev Basket 
+2022-10-01 17:16:29 INFO  TestPage:78 - Accept Basket
+2022-10-01 17:16:31 INFO  TestPage:84 - Select Continue without member
+2022-10-01 17:16:31 INFO  TestPage:89 - Set random email
+2022-10-01 17:16:32 INFO  TestPage:94 - Set random adress 
+2022-10-01 17:16:35 INFO  TestPage:99 - Select kargo
+2022-10-01 17:16:36 INFO  TestPage:104 - Go to payment page
+2022-10-01 17:16:36 INFO  TestPage:109 - Check payment page is come
+2022-10-01 17:16:43 INFO  TestPage:34 - Test End
