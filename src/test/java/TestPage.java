@@ -62,7 +62,7 @@ public class TestPage {
     public void step04SelectProduct() {
 
         log.info("Select first product");
-        dizaltiCorapPage.addBasket();
+        Assert.assertTrue(dizaltiCorapPage.addBasket());
     }
 
     @Test

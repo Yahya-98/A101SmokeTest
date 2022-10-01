@@ -14,7 +14,7 @@ public class DizaltiCorapPage {
 
     By filterBlackColour = By.xpath("//label[@for='attributes_integration_colourSİYAH']");
 
-    By addBasketBtn = By.xpath("//div[@class='count']");
+    By addBasketBtn = By.xpath("//em[@class='icon-sepetekle']");
 
     By checkProductColour = By.xpath("//div[@class='selected-variant-text']");
 
@@ -38,8 +38,8 @@ public class DizaltiCorapPage {
     public boolean addBasket() {
 
         wt.until(ExpectedConditions.urlToBe("https://www.a101.com.tr/giyim-aksesuar/dizalti-corap/?attributes_integration_colour=S%C4%B0YAH"));
-        wt.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[@class='icon-sepetekle']")));
-        driver.findElement(By.xpath("//em[@class='icon-sepetekle']")).click();
+        wt.until(ExpectedConditions.elementToBeClickable(addBasketBtn));
+        driver.findElement(addBasketBtn).click();
         return true;
     }
 
